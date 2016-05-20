@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/ionic.css">
+<link rel="stylesheet" type="text/css" href="css/Mobile.css">
+</head>
+<script src="js/ionic.bundle.min.js"></script>
+<script src="js/bindonce.min.js"></script>
+<script src="js/quick-ng-repeat.js"></script>
+<body>
+<div class="send-mes-box common-box">
+    <div class="input-box">
+        <textarea placeholder="想说点什么"></textarea>
+    </div>
+    <div class="repcomment-box">
+        <div class="item item-avatar" href="#">
+          <img src="images/avator.png" alt="" />
+            <h2>cici<span class="publish-state dis-color">所有人可见</span></h2>
+            <p class="text-color">Marion Luttenberger ,奥地利女摄影师</p>
+            <div class="hb-mo-action">
+                <span class="time time-color">2小时前</span>
+            </div>
+        </div>
+    </div>
+    <div class="select-replay">
+        <li class="item item-checkbox" style="border: none;">
+            <label class="checkbox">
+                <input type="checkbox">
+            </label>
+            同时回复该条动态
+        </li>
+    </div>
+    <div class="button-bar bar-dark bar-bottom">
+        <a class="button" ng-click=""><i class="ion-happy"></i></a>
+        <a class="button" ng-click=""><i class="ion-image"></i></a>
+        <a class="button" ng-click="openCamera()"><i class="ion-camera"></i></a>
+        <a class="button" ng-click="openCamera()"><i class="ion-at"></i></a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/ionic.css">
+<link rel="stylesheet" type="text/css" href="css/Mobile.css">
+</head>
+<script src="js/ionic.bundle.min.js"></script>
+<script src="js/bindonce.min.js"></script>
+<script src="js/quick-ng-repeat.js"></script>
+<body>
+<div class="list">
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici<span class="publish-state dis-color">所有人可见</span></h2>
+    <p class="text-color">Marion Luttenberger ,奥地利女摄影师</p>
+    <div class="img-box">
+      <ul class="img-list">
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+      </ul>
+    </div>
+    <div class="praise-box"> <a href="#"><img src="images/mo-img6.jpg" /></a> <a href="#"><img src="images/mo-img1.jpg" alt=""/></a> <a href="#"><img src="images/mo-img1.jpg" alt=""/></a> <a href="#"><img src="images/mo-img1.jpg" alt=""/></a> <a href="#"><img src="images/mo-img1.jpg" alt=""/></a> </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"></i> </div>
+  </div>
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici<span class="publish-state dis-color">所有人可见</span></h2>
+    <p class="text-color">平时最喜欢去的咖啡店是</p>
+    <div class="vote-box">
+      <ul class="list">
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" />
+          </label>
+          Flux Capacitor</li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" />
+          </label>
+          Flux Capacitor</li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" />
+          </label>
+          Flux Capacitor</li>
+      </ul>
+      <div class="btn-box">
+        <button class="button button-stable">投票</button>
+        <button class="button button-stable">查看结果</button>
+      </div>
+      <div class="vote-text">
+        <p class="dis-color">总计<span class="vote-count">0票</span>最多可选择<span class="select-count">1项</span><span class="vote-time">2014-04-10 10:0:00</span></p>
+      </div>
+    </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"></i> </div>
+  </div>
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici<span class="publish-state dis-color">部分同事可见</span></h2>
+    <p class="text-color">平时最喜欢去的咖啡店是</p>
+    <div class="vote-box">
+      <ul class="list vote-result-list">
+        <li class="item item-checkbox">
+          <dl>
+            <dt>MANHUA COFFEE</dt>
+            <dd> <span class="progress-bar"> <span class="inner-bar" style="width:10%"></span> </span> <span class="progress-text">36</span> </dd>
+          </dl>
+        </li>
+        <li class="item item-checkbox">
+          <dl>
+            <dt>MANHUA COFFEE</dt>
+            <dd> <span class="progress-bar"> <span class="inner-bar" style="width:50%"></span> </span> <span class="progress-text">54</span> </dd>
+          </dl>
+        </li>
+        <li class="item item-checkbox">
+          <dl>
+            <dt>不是书店</dt>
+            <dd> <span class="progress-bar"> <span class="inner-bar" style="width:20%"></span> </span> <span class="progress-text">40</span> </dd>
+          </dl>
+        </li>
+        <li class="item item-checkbox">
+          <dl>
+            <dt>一杯沧海</dt>
+            <dd> <span class="progress-bar"> <span class="inner-bar" style="width:80%"></span> </span> <span class="progress-text">60</span> </dd>
+          </dl>
+        </li>
+      </ul>
+      <div class="vote-text">
+        <p class="">总计<span class="vote-count">0票</span>最多可选择<span class="select-count">1项</span><span class="vote-time">2014-04-10 10:0:00</span></p>
+      </div>
+    </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"></i> </div>
+  </div>
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici</h2>
+    <div class="arc-activity-box">
+      <div class="list">
+        <div class="item item-thumbnail-left" href="#"> <img src="images/mo-img2.bmp">
+          <h2 class="text-color">5月20日晚，优酷网对锤子科技产品……</h2>
+        </div>
+      </div>
+    </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"></i> <span class="activityOperationPanel"> <i class="btn-action icon ion-thumbsup" ng-click="toggleLikeButton()"></i> <i class="btn-action icon ion-chatbox-working" ng-click="createComment()"></i> <i class="btn-action icon ion-share" ng-click="shareThisActivity()"></i> <i class="btn-action icon ion-ios7-star-outline" ng-click="addToFavorite()"></i> </span> </div>
+  </div>
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici</h2>
+    <p class="text-color">很好的一篇文章，共享一下~</p>
+    <div class="arc-activity-box">
+      <div class="list">
+        <div class="item item-thumbnail-left" href="#"> <img src="images/mo-img2.bmp">
+          <h2 class="text-color">5月20日晚，优酷网对锤子科技产品……</h2>
+        </div>
+      </div>
+      <div class="notice-box"> <span class="text-color span-gap">通知给</span><a class="label">移动开发部</a><a class="label">技术部</a> </div>
+    </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"></i> </div>
+  </div>
+  <div class="item item-avatar" href="#"> <img src="images/avator.png" alt="" />
+    <h2>cici<span class="publish-state dis-color">所有人可见</span></h2>
+    <p class="text-color">很好的一篇文章，共享一下~</p>
+    <div class="img-box">
+      <ul class="img-list">
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+        <li class="img-item"><img  src="images/mo-img1.jpg" alt=""/></li>
+      </ul>
+    </div>
+    <div class="arc-activity-box">
+      <div class="list">
+        <div class="item item-thumbnail-left" href="#"> <img src="images/mo-img2.bmp">
+          <h2 class="text-color">近乎产品维护规定.doc</h2>
+        </div>
+      </div>
+    </div>
+    <div class="hb-mo-action"> <span class="time time-color">2小时前</span> <a class="normalDeleteLink" href="">删除</a> <i class="button button-clear icon ion-ios7-plus-outline mo-add-icon"> </i> </div>
+    <div class="comment-rel-box">
+      <ul class="list comment-rel-list">
+        <li> <a href="" class="avatar-mini"><img src="images/avator.png" alt="" /></a>
+          <div class="replay-box"> <a href="" class="user-name text-black">Marsha</a> <span class="replay-text text-gray">回复</span><a href="" class="user-name text-black">cici:</a><span class="text-black">整理的很用心，赞一个</span> </div>
+        </li>
+        <li> <a href="" class="avatar-mini"><img src="images/mo-img2.bmp" alt="" /></a>
+          <div class="replay-box"> <a href="" class="user-name text-black">Neil</a> <span class="replay-text text-gray">回复</span><a href="" class="user-name text-black">cici:</a><span class="text-black">赞一个+1</span> </div>
+        </li>
+        <li> <a href="" class="avatar-mini"><img src="images/mo-img1.jpg" alt="" /></a>
+          <div class="replay-box"> <a href="" class="user-name text-black">seth</a> <span class="replay-text text-gray">回复</span><a href="" class="user-name text-black">cici:</a><span class="text-black">整理的很用心，赞一个</span> </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
