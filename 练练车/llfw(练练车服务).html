@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>我是学员</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<body>
+	<!-- 头部 -->
+	<div class="bar bar-header">
+		<h3>练练车</h3>
+	</div>
+	<div class="container">
+		<div class="media-box bg-white">
+			<ul class="time-title two-li text-center clearfix">
+				<li class="cur"><a href="">考证服务</a></li>
+				<li><a href="">特色服务</a></li>
+			</ul>
+			<article class="area-list">
+				<ul class="media-list unlink">
+					<li>
+						<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+						<div class="avatar avatar-big"><img src="images/avatar.png" alt=""></div>
+						<h4 class="clearfix">单次服务</h4>
+						<p>
+							<span class="server">6个月学时</span>
+						</p>
+						<p class="text-money text-org"><i>&yen;</i>3480.00元</p>
+					</li>
+					<li>
+						<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+						<div class="avatar avatar-big"><img src="images/avatar2.png" alt=""></div>
+						<h4 class="clearfix">单次服务</h4>
+						<p>
+							<span class="server">6个月学时</span>
+						</p>
+						<p class="text-money text-org"><i>&yen;</i>6480.00元</p>
+					</li>
+				</ul>
+			</article>
+			<article class="area-list bg-gray" style="display:none;">
+				<h4 class="no-content text-gray">敬请期待!</h4>
+			</article>
+		</div>
+	</div>
+	<!--尾部 -->
+	<footer class="bar-footer">
+		<div class="footer-btn">
+			<a href=""><span class="xc-ico icon-user-tie"></span><span class="text">我的教练</span></a>
+			<a href="" class="cur"><span class="xc-ico icon-headphones"></span><span class="text">练车服务</span></a>
+			<a href=""><span class="xc-ico icon-user"></span><span class="text">我的</span></a>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".time-title.two-li li").on("click",function(e){
+			e.preventDefault();
+			var $_this = $(this),
+				_index = $_this.index();
+			$_this.addClass("cur").siblings().removeClass("cur");
+			$(".area-list").eq(_index).show().siblings(".area-list").hide();;
+		});
+	});
+</script>
+</html>

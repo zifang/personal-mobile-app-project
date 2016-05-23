@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>我是学员</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<body>
+	<!-- 头部 -->
+	<div class="bar bar-header">
+		<a href="" class="btn btn-left"><span class="icon-angle-left"></span></a>
+		<h3>编辑资料</h3>
+		<a href="" class="btn btn-right">保存</a>
+	</div>
+	<div class="container">
+		<div class="media-box bg-white">
+			<div class="profile-box">
+				<div class="info-dis info-dis-avatar clearfix">
+					<!-- <a href="" class="btn-right"><i class="icon-angle-right"></i></a> -->
+					<span class="dis-name">头像</span>
+					<div class="pull-right user-avatar-box">
+						<input type="file" name="file" id="file" accept="image/*">
+					</div>
+					<div class="avatar pull-right"><img src="images/noPhoto.png" alt="" id="user-avatar"></div>
+				</div>
+				<div class="b-t-b">
+					<div class="info-dis">
+						<span class="dis-name">姓名</span>
+						<input class="form-control" type="text" value="阿代">
+					</div>
+					<div class="info-dis">
+						<span class="dis-name">性别</span>
+						<div class="address-box">
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">男</option>
+								<option value="">女</option>
+							</select>
+						</div>
+					</div>
+					<div class="info-dis">
+						<span class="dis-name">城市</span>
+						<div class="address-box">
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">河南省</option>
+							</select>
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">郑州市</option>
+							</select>
+						</div>
+					</div>
+					<div class="info-dis">
+						<span class="dis-name">身份证号</span>
+						<input class="form-control" type="text" value="412726198758786985">
+					</div>
+					<div class="info-dis">
+						<span class="dis-name">籍贯</span>
+						<div class="address-box">
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">河南省</option>
+							</select>
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">郑州市</option>
+							</select>
+							<select name="" id="" class="form-control">
+								<option value="">请选择</option>
+								<option value="">郸城县</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="b-b">
+					<div class="info-dis">
+						<span class="dis-name">手机号</span>
+						<input class="form-control" type="tel" value="15712365444">
+					</div>
+					<div class="info-dis">
+						<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+						<span class="dis-name">邮箱</span>
+						<input class="form-control" readonly type="email" placeholder="请修改">
+					</div>
+				</div>
+				<div class="btn-box bg-gray">
+					<a href="" class="btn-common">保存</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".time-title.two-li li").on("click",function(e){
+			e.preventDefault();
+			var $_this = $(this),
+				_index = $_this.index();
+			$_this.addClass("cur").siblings().removeClass("cur");
+			$(".area-list").eq(_index).show().siblings(".area-list").hide();;
+		});
+
+		//上传图片  当文件内容改变时，自动上传头像
+		$("#file").change(function(){
+			//检验是否为图像文件  
+			var file = document.getElementById("file").files[0];  
+			var reader = new FileReader();  
+			reader.readAsDataURL(file);  
+			reader.onload=function(e){  
+			    //显示文件  
+			    $("#user-avatar").attr("src",this.result);
+			}  
+		});
+	});
+</script>
+</html>

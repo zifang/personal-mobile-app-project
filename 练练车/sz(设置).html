@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>我是学员</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<body>
+	<!-- 头部 -->
+	<div class="bar bar-header">
+		<a href="" class="btn btn-left"><span class="icon-angle-left"></span></a>
+		<h3>设置</h3>
+	</div>
+	<div class="container">
+		<div class="media-box bg-white">
+			<div class="profile-box">
+				<div class="info-dis">
+					<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+					<span class="dis-name">修改密码</span>
+					<input class="form-control" type="password" value="123456">
+				</div>
+				<div class="info-dis">
+					<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+					<span class="dis-name">退出登录</span>
+					<a class="form-control" href="javascript:;"></a>
+				</div>
+				<!-- <div class="btn-box bg-gray">
+					<a href="" class="btn-common">保存</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".time-title.two-li li").on("click",function(e){
+			e.preventDefault();
+			var $_this = $(this),
+				_index = $_this.index();
+			$_this.addClass("cur").siblings().removeClass("cur");
+			$(".area-list").eq(_index).show().siblings(".area-list").hide();;
+		});
+		//显示下拉框
+		$(".show-dropmenu").on("click",function(){
+			var _this =$(this);
+			$(_this).parent().find(".dropmenu-list").fadeIn();
+		});
+
+		$(".dropmenu-list li").on("click",function(e){
+			e.preventDefault();
+			var _value = $(this).find("a").text();
+			$(this).parents(".dropmenu-list").parent().find(".show-dropmenu").val(_value);
+			$(this).parents(".dropmenu-list").fadeOut();
+		});
+
+		//上传图片  当文件内容改变时，自动上传头像
+		$("#file").change(function(){
+			//检验是否为图像文件  
+			var file = document.getElementById("file").files[0];  
+			var reader = new FileReader();  
+			reader.readAsDataURL(file);  
+			reader.onload=function(e){  
+			    //显示文件  
+			    $("#user-avatar").attr("src",this.result);
+			}  
+		});
+	});
+</script>
+</html>

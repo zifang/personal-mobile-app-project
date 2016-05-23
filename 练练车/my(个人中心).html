@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>我是学员</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<body>
+	<!-- 头部 -->
+	<div class="bar bar-header">
+		<h3>我的</h3>
+	</div>
+	<div class="container">
+		<div class="media-box bg-white">
+			<ul class="media-list unlink user-detail b-b">
+				<li>
+					<a href="" class="btn-right"><i class="icon-angle-right"></i></a>
+					<div class="avatar"><img src="images/noPhoto.png" alt=""></div>
+					<h4 class="clearfix">阿代</h4>
+					<p>已学车0天/已练车0小时</p>
+				</li>
+			</ul>
+			<div class="info-list p-l-r">
+				<div class="order-text">
+					<p><a href="" class="btn-right">0 <i class="icon-angle-right"></i></a><span class="xc-icon bg-org"><i class="icon-user"></i></span>我的</p>
+				</div>
+				<div class="order-text">
+					<p><a href="" class="btn-right"><i class="icon-angle-right"></i></a><span class="xc-icon bg-exam"><i class="icon-border_color"></i></span>我的考试</p>
+				</div>
+				<div class="order-text">
+					<p><a href="" class="btn-right"><i class="icon-angle-right"></i></a><span class="xc-icon bg-book"><i class="icon-comments"></i></span>我的评价</p>
+				</div>
+				<div class="order-text">
+					<p><a href="" class="btn-right">0元 <i class="icon-angle-right"></i></a><span class="xc-icon bg-account"><i class="icon-coin-yen"></i></span>我的账户</p>
+				</div>
+				<div class="order-text">
+					<p><span class="xc-icon bg-follow"><i class="icon-gift"></i></span>我的服务</p>
+				</div>
+				<div class="order-text">
+					<p><span class="xc-icon bg-jf"><i class="icon-hourglass-2"></i></span>我的积分</p>
+				</div>
+				<div class="order-text">
+					<p><span class="xc-icon bg-tg"><i class="icon-sign-out"></i></span>我的推广码</p>
+				</div>
+				<div class="order-text">
+					<p><a href="" class="btn-right"><i class="icon-angle-right"></i></a><span class="xc-icon bg-black"><i class="icon-settings"></i></span>设置</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--尾部 -->
+	<footer class="bar-footer">
+		<div class="footer-btn">
+			<a href=""><span class="xc-ico icon-user-tie"></span><span class="text">我的教练</span></a>
+			<a href=""><span class="xc-ico icon-headphones"></span><span class="text">练车服务</span></a>
+			<a href="" class="cur"><span class="xc-ico icon-user"></span><span class="text">我的</span></a>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".time-title.two-li li").on("click",function(e){
+			e.preventDefault();
+			var $_this = $(this),
+				_index = $_this.index();
+			$_this.addClass("cur").siblings().removeClass("cur");
+			$(".area-list").eq(_index).show().siblings(".area-list").hide();;
+		});
+	});
+</script>
+</html>

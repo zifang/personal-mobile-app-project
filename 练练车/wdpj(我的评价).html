@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>我是学员</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<body>
+	<!-- 头部 -->
+	<div class="bar bar-header">
+		<a href="" class="btn btn-left"><span class="icon-angle-left"></span></a>
+		<h3>我的评价</h3>
+	</div>
+	<div class="container">
+		<div class="media-box bg-white">
+			<ul class="time-title two-li text-center clearfix">
+				<li class="cur"><a href="">已评价</a></li>
+				<li><a href="">待评价</a></li>
+			</ul>
+			<article class="area-list">
+				<ul class="unavatar-media-list">
+					<li>
+						<span class="pull-right text-gray">2015-2-19</span>
+						<p class="text-gray">对<span class="text-success">杨先华</span>先生的评价：</p>
+						<p class="comment-dis">有耐心，负责人，给人感觉很好，练车很轻松，赞一个……</p>
+					</li>
+					<li>
+						<span class="pull-right text-gray">2015-2-19</span>
+						<p class="text-gray">对<span class="text-success">杨先华</span>先生的评价：</p>
+						<p class="comment-dis">有耐心，负责人，给人感觉很好，练车很轻松，赞一个……</p>
+					</li>
+					<li>
+						<span class="pull-right text-gray">2015-2-19</span>
+						<p class="text-gray">对<span class="text-success">杨先华</span>先生的评价：</p>
+						<p class="comment-dis">有耐心，负责人，给人感觉很好，练车很轻松，赞一个……</p>
+					</li>
+					<li>
+						<span class="pull-right text-gray">2015-2-19</span>
+						<p class="text-gray">对<span class="text-success">杨先华</span>先生的评价：</p>
+						<p class="comment-dis">有耐心，负责人，给人感觉很好，练车很轻松，赞一个……</p>
+					</li>
+				</ul>
+			</article>
+			<article class="area-list" style="display:none;">
+				<ul class="media-list unlink unlink-avatar-small">
+					<li>
+						<div class="avatar"><img src="images/noPhoto.png" alt=""></div>
+						<h4 class="clearfix">杨先华</h4>
+						<p>
+							<span class="server">一对一服务</span>
+							<span class="class-type">科目：倒车入库</span>
+						</p>
+						<p><a href="" class="btn-comment pull-right">评价</a><span>库号：9号</span></p>
+					</li>
+					<li>
+						<div class="avatar"><img src="images/noPhoto.png" alt=""></div>
+						<h4 class="clearfix">杨先华</h4>
+						<p>
+							<span class="server">一对一服务</span>
+							<span class="class-type">科目：倒车入库</span>
+						</p>
+						<p><a href="" class="btn-comment pull-right">评价</a><span>库号：9号</span></p>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".time-title.two-li li").on("click",function(e){
+			e.preventDefault();
+			var $_this = $(this),
+				_index = $_this.index();
+			$_this.addClass("cur").siblings().removeClass("cur");
+			$(".area-list").eq(_index).show().siblings(".area-list").hide();;
+		});
+	});
+</script>
+</html>
